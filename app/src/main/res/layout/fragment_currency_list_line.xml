@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  app:contentView="@+id/currency_list_line_card_view"
+  app:rightMenuView="@+id/currency_list_line_right_swipe_menu">
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/currency_list_line_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:padding="0dp"
+    card_view:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="fill_parent"
+      android:layout_height="76dp">
+
+      <ImageView
+        android:id="@+id/currency_list_currency_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="72dp"
+        android:ellipsize="end"
+        android:maxLength="16"
+        android:maxLines="1"
+        android:text="Currency Name"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_currency_symbol"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="8dp"
+        android:padding="3dp"
+        android:background="@drawable/bg_rounded_solid"
+        android:gravity="center_vertical"
+        android:text="SYM"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        app:layout_constraintStart_toEndOf="@+id/currency_list_currency_name"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="72dp"
+        android:gravity="center_vertical|end"
+        android:text="Price"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_list_currency_name"/>
+
+      <TextView
+        android:id="@+id/currency_list_change_1h"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Change1h"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/currency_list_change_24h"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_change_24h"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Change24h"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toStartOf="@+id/currency_list_change_7d"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_change_7d"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Change7d"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:visibility="@string/change1w_visibility"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_24h_volume"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical|end"
+        android:text="24hVolume"
+        android:textSize="13sp"
+        android:visibility="@string/marketcap_24hvolume_visibility"
+        app:layout_constraintEnd_toStartOf="@+id/currency_list_change_1h"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_currency_market_cap"
+        android:layout_width="130dp"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical|end"
+        android:text="MarketCap"
+        android:textSize="13sp"
+        android:visibility="@string/marketcap_24hvolume_visibility"
+        app:layout_constraintEnd_toStartOf="@+id/currency_list_24h_volume"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/textViewLineMarker"
+        android:layout_width="5dp"
+        android:layout_height="0dp"
+        android:background="#00766c"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <ImageView
+        android:id="@+id/currency_list_favorite_marker"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginStart="34dp"
+        android:src="@drawable/ic_star_green_24dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <ImageView
+        android:id="@+id/currency_list_watchlist_marker"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginStart="34dp"
+        android:src="@drawable/ic_eye_green_24dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/currency_list_price_btc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="72dp"
+        android:gravity="center_vertical|end"
+        android:text="PriceSats"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="13sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_list_price"/>
+
+      <TextView
+        android:id="@+id/separator"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="72dp"
+        android:background="@color/colorListSeparator"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/currency_list_line_right_swipe_menu"
+    android:layout_width="wrap_content"
+    android:layout_height="75dp"
+    android:layout_marginTop="0dp"
+    android:layout_marginBottom="0dp"
+    android:padding="0dp"
+    card_view:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+      <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/currency_line_btn_togglefavorite"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fancy:fb_borderWidth="0dp"
+        fancy:fb_defaultColor="@color/primaryDarkColor"
+        fancy:fb_focusColor="@color/primaryColor"
+        fancy:fb_iconPaddingTop="26dp"
+        fancy:fb_iconResource="@drawable/ic_star_border_white_24dp"
+        fancy:fb_radius="0dp"
+        fancy:fb_text=""/>
+
+      <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/currency_line_btn_togglewatchlist"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/currency_line_btn_togglefavorite"
+        app:layout_constraintTop_toTopOf="parent"
+        fancy:fb_borderWidth="0dp"
+        fancy:fb_defaultColor="@color/primaryDarkColor"
+        fancy:fb_focusColor="@color/primaryColor"
+        fancy:fb_iconPaddingTop="26dp"
+        fancy:fb_iconResource="@drawable/ic_eye_off"
+        fancy:fb_radius="0dp"
+        fancy:fb_text=""/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>

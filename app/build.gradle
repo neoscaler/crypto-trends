@@ -1,0 +1,194 @@
+plugins {
+    id 'com.android.application'
+    id 'io.fabric'
+}
+
+android {
+    compileSdkVersion 28
+    buildToolsVersion '28.0.3'
+    flavorDimensions "default"
+
+    defaultConfig {
+        applicationId "com.neoscaler.cryptotrends"
+        versionCode 35
+        versionName "1.12.0"
+
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                // Export room schema for testing
+                arguments = ["room.schemaLocation":
+                                     "$projectDir/schema".toString()]
+            }
+        }
+        sourceSets {
+            // Room schemas for testing migrations
+            androidTest.assets.srcDirs += files("$projectDir/schema".toString())
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    // Optimizing dev build speed
+    if (project.hasProperty('devBuild')) {
+        splits.abi.enable = false
+        splits.density.enable = false
+        aaptOptions.cruncherEnabled = false
+    }
+    dexOptions {
+        jumboMode = true
+    }
+}
+
+project.ext {
+    supportLibraryVersion = "28.0.0"
+    androidArchVersion = "1.1.1"
+    androidRoomVersion = "1.1.1"
+    butterKnifeVersion = "10.1.0"
+    rxJavaVersion = "2.1.8"
+    rxAndroidVersion = "2.0.1"
+    timberVersion = "4.6.0"
+    okHttpVersion = "3.9.1"
+    rxRelayVersion = "2.0.0"
+    retrofitVersion = "2.5.0"
+    daggerVersion = "2.22.1"
+    dagger2lifecycleVersion = "1.0.0"
+    lombokVersion = "1.18.4"
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    compileOnly "org.projectlombok:lombok:$project.lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$project.lombokVersion"
+    compileOnly 'javax.annotation:jsr250-api:1.0'
+
+    // Support libraries
+    implementation "com.google.android.material:material:1.1.0-alpha06"
+    implementation "androidx.legacy:legacy-support-v4:1.0.0"
+    implementation "androidx.appcompat:appcompat:1.1.0-alpha05"
+    implementation "androidx.cardview:cardview:1.0.0"
+    implementation "androidx.recyclerview:recyclerview:1.1.0-alpha05"
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation "com.takisoft.preferencex:preferencex:1.0.0"
+
+    // Testing
+    implementation "com.google.firebase:firebase-crash:16.2.1"
+    androidTestImplementation 'androidx.test:runner:1.2.0-beta01'
+    androidTestImplementation "androidx.annotation:annotation:1.1.0-rc01"
+
+    //    androidTestImplementation "com.android.support.test.espresso:espresso-core:3.0.1"
+    androidTestImplementation 'androidx.test:rules:1.2.0-beta01'
+
+    // GUI libraries
+    implementation 'com.google.guava:guava:27.1-android'
+    implementation 'com.github.matecode:Snacky:1.1.4'
+    implementation 'io.github.tonnyl:whatsnew:0.1.2'
+
+    //implementation 'com.github.developer-shivam:Diagonalify:1.1'
+    implementation 'com.diogobernardino:williamchart:2.5.0'
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.36'
+    implementation 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
+    implementation 'com.github.medyo:fancybuttons:1.8.4'
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    implementation 'com.github.anzaizai:EasySwipeMenuLayout:1.1.2'
+    implementation 'com.github.ganfra:material-spinner:2.0.0'
+    implementation 'com.rengwuxian.materialedittext:library:2.1.4'
+
+    // Retrofit2
+    implementation "com.squareup.retrofit2:retrofit:$project.retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$project.retrofitVersion"
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+    implementation 'com.github.iagocanalejas:retrocache:1.2'
+
+    // GSON Converter
+    implementation "com.squareup.retrofit2:converter-gson:$project.retrofitVersion"
+
+    // Helper libraries
+    implementation 'org.modelmapper:modelmapper:0.7.4'
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.pixplicity.easyprefs:library:1.9.0'
+
+    // Eventbus
+    implementation "org.greenrobot:eventbus:3.1.1"
+
+    // Dagger core
+    implementation "com.google.dagger:dagger:$project.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-compiler:$project.daggerVersion"
+
+    // Dagger Android
+    implementation "com.google.dagger:dagger-android-support:$project.daggerVersion"
+    implementation "com.google.dagger:dagger-android:$project.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-support:$project.daggerVersion"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$project.daggerVersion"
+
+    // ButterKnife
+    implementation "com.jakewharton:butterknife:$project.butterKnifeVersion"
+    annotationProcessor "com.jakewharton:butterknife-compiler:$project.butterKnifeVersion"
+
+    // Priority Job Queue
+    implementation "com.evernote:android-job:1.3.0-rc1"
+
+    // OkHttp Logging Interceptor
+    implementation "com.squareup.okhttp3:okhttp:$project.okHttpVersion"
+    implementation "com.squareup.okhttp3:logging-interceptor:$project.okHttpVersion"
+
+    // Room Database
+    implementation "androidx.room:room-runtime:2.1.0-beta01"
+    implementation "androidx.room:room-rxjava2:2.1.0-beta01"
+    annotationProcessor "androidx.room:room-compiler:2.1.0-beta01"
+    implementation "androidx.room:room-rxjava2:2.1.0-beta01"
+    androidTestImplementation "androidx.room:room-testing:2.1.0-beta01"
+
+    // Lifecycle
+    implementation "androidx.lifecycle:lifecycle-runtime:2.2.0-alpha01"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0-alpha01"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:2.2.0-alpha01"
+
+    // For reactive streams in Room
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:2.2.0-alpha01"
+
+    // RxRelay
+    implementation "com.jakewharton.rxrelay2:rxrelay:$project.rxRelayVersion"
+
+    // ReactiveX
+    implementation "io.reactivex.rxjava2:rxjava:$project.rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$project.rxAndroidVersion"
+
+    // Timber
+    implementation "com.jakewharton.timber:timber:$project.timberVersion"
+
+    // Joda-Time
+    implementation 'net.danlew:android.joda:2.9.9.1'
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.1@aar') {
+        transitive = true
+    }
+
+    // Firebase
+    implementation "com.google.firebase:firebase-core:16.0.9"
+}
+
+// Firebase
+apply plugin: 'com.google.gms.google-services'
+repositories {
+    mavenCentral()
+}

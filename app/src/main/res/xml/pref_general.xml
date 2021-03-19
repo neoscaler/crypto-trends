@@ -1,0 +1,52 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <PreferenceCategory
+    android:key="prefcategory_general"
+    android:title="@string/pref_category_general">
+
+    <ListPreference
+      android:defaultValue="USD"
+      android:entries="@array/pref_basecurrency_titles"
+      android:entryValues="@array/pref_basecurrency_values"
+      android:key="settings.currencylist.basecurrency"
+      android:negativeButtonText="@null"
+      android:positiveButtonText="@null"
+      android:summary="%s"
+      android:title="@string/pref_title_basecurrency"/>
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+    android:key="prefcategory_smartalarms"
+    android:title="@string/pref_category_smartalarms">
+
+    <SwitchPreference
+      android:key="settings.smartalarms.globalmarket.active"
+      android:defaultValue="false"
+      android:summaryOff="@string/pref_summary_alarm_inactive"
+      android:summaryOn="@string/pref_summary_alarm_active"
+      android:title="@string/pref_marketcapalarm_title"/>
+
+    <SeekBarPreference
+      android:dependency="settings.smartalarms.globalmarket.active"
+      android:defaultValue="3"
+      android:key="settings.smartalarms.globalmarket.percentthreshold"
+      android:max="30"
+      android:summary="@string/pref_marketcapalarm_percentslider"/>
+
+  </PreferenceCategory>
+
+  <PreferenceCategory
+    android:key="prefcategory_other"
+    android:title="@string/pref_category_other">
+
+    <SwitchPreference
+      android:key="settings.general.analytics.active"
+      android:defaultValue="true"
+      android:summaryOff="@string/pref_summary_analytics_inactive"
+      android:summaryOn="@string/pref_summary_analytics_active"
+      android:title="@string/pref_analytics_title"/>
+
+  </PreferenceCategory>
+
+</PreferenceScreen>

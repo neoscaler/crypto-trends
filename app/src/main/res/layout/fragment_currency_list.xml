@@ -1,0 +1,43 @@
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.neoscaler.cryptotrends.application.ui.currencylist.CurrencyListFragment">
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/currencylist_coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/currencylist_bottom_navigation"
+    android:fitsSystemWindows="true">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+      android:id="@+id/currency_list_refreshlayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/currency_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="76dp"
+        android:background="#F1F1F1"
+        android:clipToPadding="false"
+        android:fadingEdge="none"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/currencylist_bottom_navigation"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:itemBackground="@color/primaryColor"
+    app:itemIconTint="@drawable/bnav_selector"
+    app:itemTextColor="@drawable/bnav_selector"
+    app:menu="@menu/menu_currency_list_bottom_nav"/>
+
+</RelativeLayout>

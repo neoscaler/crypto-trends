@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<resources>
+  <string name="about_appdescription">See crypto market trends at a glance.\n\n</string>
+  <string name="about_websiteinfo" translatable="true"><![CDATA[<h1>Support the development!</h1>\n\nIf you like our app, please consider to check <a href="http://cryptotrends.launchaco.com">our website</a> to find a way how to support the development.<br/>]]></string>
+  <string name="about_logodescription" translatable="false">Crypto Trends logo</string>
+  <string name="about_thirdparty"><![CDATA[<h2>3rd-party data and libraries</h2>\n\nPrice data provided by <a href="https://www.coinpaprika.com">CoinGecko</a> and <a href="http://www.cryptocompare.com">cryptocompare.com</a><br/>]]></string>
+
+  <string name="addeditalert_alert_created">New alert created.</string>
+  <string name="addeditalert_base_price">Base price in %s</string>
+  <string name="addeditalert_currentpriceinfo"><![CDATA[1 %s is currently worth <a href="#">%s</a>]]></string>
+  <string name="addeditalert_input_not_valid">Not all entered values are valid.</string>
+  <string name="addeditalert_no_valid_price">No valid price!</string>
+  <string name="addeditalert_notes">Notes (optional)</string>
+  <string-array name="addeditalert_signal_type_entries" translatable="false">
+    <item>Buy</item>
+    <item>Sell</item>
+  </string-array>
+  <string name="addeditalert_signaltype_subheader_buy">Buy signals</string>
+  <string name="addeditalert_signaltype_subheader_none">General alerts</string>
+  <string name="addeditalert_signaltype_subheader_sell">Sell signals</string>
+  <string name="addeditalert_threshold_price">Threshold price in %s</string>
+  <string name="addeditalert_title">Add/edit alert</string>
+
+  <string name="alertlist_emptyview">Create an alert by clicking\non the + button.</string>
+
+  <string name="app_name" translatable="false">Crypto Trends</string>
+
+  <string name="currencydetail_circulating_supply">Circulating supply:</string>
+  <string name="currencydetail_menu_add_alert">Add alert</string>
+  <string name="currencydetail_menu_togglefavorite">Toggle favorite</string>
+  <string name="currencydetail_menu_togglewatchlist">Toggle watched</string>
+  <string name="currencydetail_showcreatedalert">Show</string>
+
+  <string name="currencylist_bnav_all">All</string>
+  <string name="currencylist_bnav_favorites">Favorites</string>
+  <string name="currencylist_bnav_watchlist">Watchlist</string>
+  <string name="currencylist_emptyview_all">No currency price information available.\nRefresh by pulling down.</string>
+  <string name="currencylist_emptyview_favorites">Add a favorite by swiping left\non an entry and clicking the star icon.</string>
+  <string name="currencylist_emptyview_watchlist">Add to the watchlist by swiping left\n on an entry and clicking the eye icon.</string>
+  <string name="currencylist_header_1h" translatable="false">1h</string>
+  <string name="currencylist_header_24h" translatable="false">24h</string>
+  <string name="currencylist_header_24hvolume">24h Volume</string>
+  <string name="currencylist_header_7d" translatable="false">7d</string>
+  <string name="currencylist_header_marketcap">Market Cap.</string>
+  <string name="currencylist_header_nameprice">Name / Price</string>
+  <string name="currencylist_pricedataupdate">Updating price data, please stand by…</string>
+  <string name="currencylist_pricedataupdated">Price data updated.</string>
+  <string name="currencylist_remoteexception">Error updating price data. Please try again.</string>
+  <string name="currencylist_remoteexception_detailview">Error updating price data. Charts not available.</string>
+  <string name="currencylist_search">Search</string>
+
+  <string name="mainactivity_query_exit">Press back once again to exit</string>
+
+  <string name="menu_main_about">About</string>
+  <string name="menu_main_alerts">Alerts</string>
+  <string name="menu_main_feedback">Send feedback</string>
+  <string name="menu_main_marketoverview">Market overview</string>
+  <string name="menu_main_settings">Settings</string>
+
+  <string name="navheader_24hvol" translatable="false">24h volume:</string>
+  <string name="navheader_btcdom" translatable="false">BTC dom.:</string>
+  <string name="navheader_lastupdated">Updated:</string>
+  <string name="navheader_marketcap" translatable="false">Market cap:</string>
+  <string name="navheader_na" translatable="false">n/a</string>
+  <string name="navheader_never">never</string>
+  <string name="navheader_stringwithdollar" translatable="false">"$%s "</string>
+  <string name="navheader_stringwithpercent" translatable="false">%s %%</string>
+
+  <string name="navigation_drawer_close">Close navigation drawer</string>
+  <string name="navigation_drawer_open">Open navigation drawer</string>
+
+  <string name="notification_customalert_triggered_text">Price of %s is now %s (from %s)</string>
+  <string name="notification_customalert_triggered_title">%s price alert!</string>
+  <string name="notification_customalert_triggered_title_buy">Buy signal for %s!</string>
+  <string name="notification_customalert_triggered_title_sell">Sell signal for %s!</string>
+  <string name="notification_smartalarm_marketcap_text">Capitalization changed by %.2f%% to %s B</string>
+  <string name="notification_smartalarm_marketcap_title">Market capitalization change!</string>
+
+  <string name="toolbar_billion_suffix">%s B</string>
+  <string name="toolbar_million_suffix">%s M</string>
+
+  <!-- Strings related to Settings -->
+  <string name="pref_activity_title_settings">Settings</string>
+  <string-array name="pref_basecurrency_titles" translatable="false">
+    <item>USD (default)</item>
+    <item>EUR</item>
+    <item>PLN</item>
+    <item>KRW</item>
+    <item>GBP</item>
+    <item>CAD</item>
+    <item>JPY</item>
+    <item>RUB</item>
+    <item>TRY</item>
+    <item>NZD</item>
+    <item>AUD</item>
+    <item>CHF</item>
+    <item>UAH</item>
+    <item>HKD</item>
+    <item>SGD</item>
+    <item>NGN</item>
+    <item>PHP</item>
+    <item>MXN</item>
+    <item>BRL</item>
+    <item>THB</item>
+    <item>CLP</item>
+    <item>CZK</item>
+    <item>DKK</item>
+    <item>HUF</item>
+    <item>IDR</item>
+    <item>ILS</item>
+    <item>MYR</item>
+    <item>NOK</item>
+    <item>PKR</item>
+    <item>SEK</item>
+    <item>TWD</item>
+    <item>ZAR</item>
+    <item>VND</item>
+    <item>BOB</item>
+    <item>COP</item>
+    <item>PEN</item>
+    <item>ARS</item>
+    <item>ISK</item>
+    <!--<item>BTC</item>
+    <item>ETH</item>-->
+  </string-array>
+  <string-array name="pref_basecurrency_values" translatable="false">
+    <item>USD</item>
+    <item>EUR</item>
+    <item>PLN</item>
+    <item>KRW</item>
+    <item>GBP</item>
+    <item>CAD</item>
+    <item>JPY</item>
+    <item>RUB</item>
+    <item>TRY</item>
+    <item>NZD</item>
+    <item>AUD</item>
+    <item>CHF</item>
+    <item>UAH</item>
+    <item>HKD</item>
+    <item>SGD</item>
+    <item>NGN</item>
+    <item>PHP</item>
+    <item>MXN</item>
+    <item>BRL</item>
+    <item>THB</item>
+    <item>CLP</item>
+    <item>CZK</item>
+    <item>DKK</item>
+    <item>HUF</item>
+    <item>IDR</item>
+    <item>ILS</item>
+    <item>MYR</item>
+    <item>NOK</item>
+    <item>PKR</item>
+    <item>SEK</item>
+    <item>TWD</item>
+    <item>ZAR</item>
+    <item>VND</item>
+    <item>BOB</item>
+    <item>COP</item>
+    <item>PEN</item>
+    <item>ARS</item>
+    <item>ISK</item>
+    <!--<item>BTC</item>
+    <item>ETH</item>-->
+  </string-array>
+  <string name="pref_category_general">General</string>
+  <string name="pref_category_smartalarms">Smart Alarms</string>
+  <string name="pref_marketcapalarm_title">Market capitalization change</string>
+  <string name="pref_marketcapalarm_percentslider">Required change in % / 24h</string>
+  <string name="pref_summary_alarm_active">Alarm is active</string>
+  <string name="pref_summary_alarm_inactive">Alarm is inactive</string>
+  <string name="pref_title_basecurrency">Base currency</string>
+  <string name="pref_category_other">Other</string>
+  <string name="pref_analytics_title" translatable="false">Analytics</string>
+  <string name="pref_summary_analytics_active">Anonymous analytics collection is enabled and helps
+    making the app better.</string>
+  <string name="pref_summary_analytics_inactive">Anonymous analytics Collection is disabled. Enable it to help
+    making the app better.</string>
+
+  <string name="smartalarm_marketcap_activated">Market cap. alarm activated!</string>
+  <string name="smartalarm_marketcap_disabled">Market cap. alarm disabled.</string>
+
+  <string name="snack_currency_favored">Favorite status for %s changed.</string>
+  <string name="snack_currency_watched">Watchlist status for %s changed.</string>
+</resources>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".application.ui.MainActivity">
+
+  <com.google.android.material.appbar.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <!-- Conflicts with CoordinatorLayout in BottomNavigationBar -->
+    <!-- app:layout_scrollFlags="scroll|enterAlways" -->
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:background="?attr/colorPrimary"
+      android:elevation="6dp"
+      app:layout_collapseMode="pin"
+      app:popupTheme="@style/AppTheme.PopupOverlay">
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbarMarketCapLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+          android:id="@+id/textViewTotalMarketCapLabel"
+          android:layout_width="75dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="9dp"
+          android:text="@string/navheader_marketcap"
+          android:textColor="@color/snackTextColor"
+          android:textSize="13sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+          android:id="@+id/toolbar24hVolumeLabel"
+          android:layout_width="75dp"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="2dp"
+          android:text="@string/navheader_24hvol"
+          android:textColor="@color/snackTextColor"
+          android:textSize="13sp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/textViewTotalMarketCapLabel"/>
+
+        <TextView
+          android:id="@+id/toolbarMarketCap"
+          android:layout_width="120dp"
+          android:layout_height="wrap_content"
+          android:lines="1"
+          android:layout_marginTop="9dp"
+          android:text="@string/navheader_na"
+          android:textAlignment="textEnd"
+          android:textColor="@color/snackTextColor"
+          android:textSize="13sp"
+          app:layout_constraintStart_toEndOf="@+id/textViewTotalMarketCapLabel"
+          app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+          android:id="@+id/toolbar24hVolume"
+          android:layout_width="120dp"
+          android:layout_height="wrap_content"
+          android:lines="1"
+          android:layout_marginTop="2dp"
+          android:text="@string/navheader_na"
+          android:textAlignment="textEnd"
+          android:textColor="@color/snackTextColor"
+          android:textSize="13sp"
+          app:layout_constraintStart_toEndOf="@+id/toolbar24hVolumeLabel"
+          app:layout_constraintTop_toBottomOf="@+id/toolbarMarketCap"/>
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+  </com.google.android.material.appbar.AppBarLayout>
+
+  <include layout="@layout/content_main"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

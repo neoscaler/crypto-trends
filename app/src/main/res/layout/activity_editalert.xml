@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:focusableInTouchMode="true"
+  tools:context="com.neoscaler.cryptotrends.application.ui.alert.EditAddAlertActivity">
+
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/edit_alert_price_threshold_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edit_alert_price_base_layout">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+      android:id="@+id/edit_alert_price_threshold"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:digits="0123456789."
+      android:ems="10"
+      android:inputType="numberDecimal"
+      android:textSize="14sp"
+      app:met_floatingLabel="highlight"
+      app:met_iconLeft="@drawable/_ic_target_png"/>
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <fr.ganfra.materialspinner.MaterialSpinner
+    android:id="@+id/edit_alert_signal_type"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="64dp"
+    android:layout_marginTop="8dp"
+    android:entries="@array/addeditalert_signal_type_entries"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edit_alert_price_threshold_layout"
+    app:ms_hint="Signal type (optional)"/>
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/edit_alert_signal_type_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edit_alert_signal_type">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+      android:id="@+id/edit_alert_notes"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:ems="10"
+      android:hint="@string/addeditalert_notes"
+      android:inputType="textMultiLine"
+      android:singleLine="false"
+      android:textSize="14sp"
+      app:met_iconLeft="@drawable/_note_text_png"/>
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/edit_alert_price_base_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="24dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/currentPriceInfo">
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+      android:id="@+id/edit_alert_price_base"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:digits="0123456789."
+      android:inputType="numberDecimal"
+      android:textSize="14sp"
+      app:met_iconLeft="@drawable/_format_vertical_align_bottom"/>
+
+  </com.google.android.material.textfield.TextInputLayout>
+
+
+  <LinearLayout
+    android:id="@+id/edit_alert_currency_id_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="64dp"
+    android:layout_marginTop="24dp"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <TextView
+      android:id="@+id/edit_alert_currency_id_label"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:text="Currency / Token"
+      android:textColor="@color/primaryTextColor"
+      android:textSize="12sp"/>
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+      android:id="@+id/edit_alert_currency_id"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="8dp"
+      android:textColor="@color/primaryTextColor"/>
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/imageView4"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="@+id/edit_alert_currency_id_layout"
+    app:layout_constraintEnd_toStartOf="@+id/edit_alert_currency_id_layout"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/edit_alert_currency_id_layout"
+    app:srcCompat="@drawable/_coins"/>
+
+  <ImageView
+    android:id="@+id/imageView5"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    app:layout_constraintBottom_toBottomOf="@+id/edit_alert_signal_type"
+    app:layout_constraintEnd_toStartOf="@+id/edit_alert_signal_type"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/edit_alert_signal_type"
+    app:srcCompat="@drawable/_types"/>
+
+  <TextView
+    android:id="@+id/currentPriceInfo"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="72dp"
+    android:layout_marginTop="4dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:autoLink="web"
+    android:text="@string/addeditalert_currentpriceinfo"
+    android:textColor="@color/secondaryTextColor"
+    android:textSize="12sp"
+    android:visibility="invisible"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/edit_alert_currency_id_layout"/>
+
+  <mehdi.sakout.fancybuttons.FancyButton
+    android:id="@+id/btn_save_alert"
+    android:layout_width="0dp"
+    android:layout_height="50dp"
+    android:paddingBottom="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    fancy:fb_borderColor="#FFFFFF"
+    fancy:fb_borderWidth="0dp"
+    fancy:fb_defaultColor="@color/secondaryDarkColor"
+    fancy:fb_focusColor="@color/secondaryColor"
+    fancy:fb_radius="0dp"
+    fancy:fb_text="Save"
+    fancy:fb_textColor="#FFFFFF"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

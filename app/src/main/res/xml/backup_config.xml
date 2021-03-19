@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+  <!-- Evernote Job -->
+  <exclude
+    domain="sharedpref"
+    path="evernote_jobs.xml"/>
+  <exclude
+    domain="database"
+    path="evernote_jobs.db"/>
+
+  <!-- Google Firebase -->
+  <exclude
+    domain="database"
+    path="google_app_measurement_local.db"/>
+  <exclude
+    domain="database"
+    path="crash_reports"/>
+  <exclude
+    domain="sharedpref"
+    path="com.google.android.gms.appid.xml"/>
+  <exclude
+    domain="sharedpref"
+    path="com.google.android.gms.measurement.prefs.xml"/>
+</full-backup-content>

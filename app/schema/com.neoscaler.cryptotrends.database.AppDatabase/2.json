@@ -1,0 +1,205 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "8836792d348709b29ce44e7cf6a057db",
+    "entities": [
+      {
+        "tableName": "PersistedCurrency",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `symbol` TEXT NOT NULL, `name` TEXT NOT NULL, `rank` INTEGER NOT NULL, `priceUsd` REAL NOT NULL, `priceBtc` REAL NOT NULL, `_24hVolumeUsd` REAL NOT NULL, `marketCapUsd` REAL NOT NULL, `availableSupply` REAL NOT NULL, `totalSupply` REAL NOT NULL, `percentChange1h` REAL NOT NULL, `percentChange24h` REAL NOT NULL, `percentChange7d` REAL NOT NULL, `lastUpdated` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "symbol",
+            "columnName": "symbol",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "rank",
+            "columnName": "rank",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priceUsd",
+            "columnName": "priceUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priceBtc",
+            "columnName": "priceBtc",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "_24hVolumeUsd",
+            "columnName": "_24hVolumeUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "marketCapUsd",
+            "columnName": "marketCapUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "availableSupply",
+            "columnName": "availableSupply",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalSupply",
+            "columnName": "totalSupply",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentChange1h",
+            "columnName": "percentChange1h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentChange24h",
+            "columnName": "percentChange24h",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "percentChange7d",
+            "columnName": "percentChange7d",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "GlobalMarketData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `totalMarketCapUsd` INTEGER NOT NULL, `total24hVolumeUsd` INTEGER NOT NULL, `btcDominance` REAL NOT NULL, `activeCurrencies` INTEGER NOT NULL, `activeAssets` INTEGER NOT NULL, `activeMarkets` INTEGER NOT NULL, `lastUpdated` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalMarketCapUsd",
+            "columnName": "totalMarketCapUsd",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "total24hVolumeUsd",
+            "columnName": "total24hVolumeUsd",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bitcoinPercentageOfMarketCap",
+            "columnName": "btcDominance",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeCurrencies",
+            "columnName": "activeCurrencies",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeAssets",
+            "columnName": "activeAssets",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "activeMarkets",
+            "columnName": "activeMarkets",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "lastUpdated",
+            "columnName": "lastUpdated",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "CurrencyUserData",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `favorite` INTEGER NOT NULL, `watched` INTEGER NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "favorite",
+            "columnName": "favorite",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "watched",
+            "columnName": "watched",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"8836792d348709b29ce44e7cf6a057db\")"
+    ]
+  }
+}

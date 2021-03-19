@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- Enum values pulled from Android source -->
+  <string name="visibility_visible" translatable="false">0</string>
+  <string name="visibility_invisible" translatable="false">1</string>
+  <string name="visibility_gone" translatable="false">2</string>
+
+  <!-- Settings for small screen with < 350dp smallest width -->
+  <string name="change1w_visibility" translatable="false">@string/visibility_gone</string>
+  <string name="marketcap_24hvolume_visibility" translatable="false">@string/visibility_gone</string>
+</resources>

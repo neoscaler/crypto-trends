@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="change1w_visibility" translatable="false">@string/visibility_visible</string>
+  <string name="marketcap_24hvolume_visibility" translatable="false">@string/visibility_visible</string>
+</resources>

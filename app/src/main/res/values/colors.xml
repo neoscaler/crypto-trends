@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <color name="primaryColor">#26a69a</color>
+  <color name="primaryLightColor">#64d8cb</color>
+  <color name="primaryDarkColor">#00766c</color>
+  <color name="secondaryColor">#F93947</color>
+  <color name="secondaryLightColor">#FA5D68</color>
+  <color name="secondaryDarkColor">#B8010E</color>
+  <color name="primaryTextColor">#1F2B30</color>
+  <color name="secondaryTextColor">#6d797e</color>
+
+  <color name="snackTextColor">#FFFFFF</color>
+
+  <color name="colorPrimaryBackgroundDark">#00766c</color>
+  <color name="colorBackgroundGreyOut">#99FFFFFF</color>
+
+  <color name="colorTextInactive">#CCCCCC</color>
+  <color name="colorListSeparator">#EEEEEE</color>
+
+</resources>

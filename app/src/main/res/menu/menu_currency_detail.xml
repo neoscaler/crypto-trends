@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+    android:id="@+id/action_togglefavorite"
+    android:icon="@drawable/ic_star_border_white_24dp"
+    android:iconTint="@android:color/white"
+    android:title="@string/currencydetail_menu_togglefavorite"
+    app:showAsAction="always"/>
+
+  <item
+    android:id="@+id/action_togglewatchlist"
+    android:icon="@drawable/ic_eye_off"
+    android:iconTint="@android:color/white"
+    android:title="@string/currencydetail_menu_togglewatchlist"
+    app:showAsAction="ifRoom"/>
+
+  <item
+    android:id="@+id/action_addalert"
+    android:icon="@drawable/alert_decagram_white"
+    android:title="@string/currencydetail_menu_add_alert"
+    app:showAsAction="ifRoom"/>
+
+</menu>

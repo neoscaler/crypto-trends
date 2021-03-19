@@ -1,0 +1,14 @@
+<!-- drawable/chart_line.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+  android:width="108dp"
+  android:height="108dp"
+  android:viewportWidth="65.454544"
+  android:viewportHeight="65.454544">
+  <group
+    android:translateX="20.727272"
+    android:translateY="20.727272">
+    <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M16,11.78L20.24,4.45L21.97,5.45L16.74,14.5L10.23,10.75L5.46,19H22V21H2V3H4V17.54L9.5,8L16,11.78Z"/>
+  </group>
+</vector>

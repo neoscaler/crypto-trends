@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:card_view="http://schemas.android.com/apk/res-auto"
+  xmlns:fancy="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  app:contentView="@+id/alert_list_line_card_view"
+  app:rightMenuView="@+id/alert_list_line_right_swipe_enu">
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/alert_list_line_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:layout_marginTop="0dp"
+    android:padding="0dp"
+    card_view:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="fill_parent"
+      android:layout_height="88dp">
+
+      <ImageView
+        android:id="@+id/alert_line_logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/alert_line_currency_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="10dp"
+        android:text="CurrencyName"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/alert_line_currency_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_rounded_solid"
+        android:padding="3dp"
+        android:text="XYZ"
+        android:textColor="@android:color/white"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/alert_line_currency_name"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/alert_line_pricenow"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="CurPrice"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_currency_name"/>
+
+      <TextView
+        android:id="@+id/alert_line_pricenow_percentage"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="+9,99%"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/alert_line_pricenow"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_currency_name"/>
+
+      <TextView
+        android:id="@+id/alert_line_pricethreshold"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="TarPrice"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/imageViewPriceThreshold"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_pricenow"/>
+
+      <TextView
+        android:id="@+id/alert_line_pricethreshold_percentage"
+        android:layout_width="65dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="+9,99%"
+        android:textAlignment="textEnd"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@+id/alert_line_pricethreshold"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_pricenow_percentage"/>
+
+      <TextView
+        android:id="@+id/alert_line_pricebase"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="4dp"
+        android:text="$10,000"
+        android:textAlignment="textEnd"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_currency_name"/>
+
+      <TextView
+        android:id="@+id/alert_line_createdAt"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="2dp"
+        android:text="n/a"
+        android:textAlignment="textEnd"
+        android:textColor="@color/secondaryTextColor"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_pricebase"/>
+
+      <ImageView
+        android:id="@+id/imageViewBasePrice"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="6dp"
+        android:tint="@color/secondaryTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/alert_line_pricebase"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_currency_name"
+        app:srcCompat="@drawable/ic_vertical_align_bottom_24dp"/>
+
+      <ImageView
+        android:id="@+id/imageViewCreatedAt"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginTop="9dp"
+        android:tint="@color/secondaryTextColor"
+        app:layout_constraintEnd_toStartOf="@+id/alert_line_createdAt"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewBasePrice"
+        card_view:srcCompat="@drawable/ic_today_24dp"/>
+
+      <ImageView
+        android:id="@+id/imageViewPriceThreshold"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="9dp"
+        android:adjustViewBounds="false"
+        android:tint="@color/secondaryTextColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:srcCompat="@drawable/_ic_target_png"/>
+
+      <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="6dp"
+        android:tint="@color/primaryTextColor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alert_line_currency_name"
+        card_view:srcCompat="@drawable/chart_line"/>
+
+      <TextView
+        android:id="@+id/background_foreground_greyout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundGreyOut"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+      <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="72dp"
+        android:background="@color/colorListSeparator"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+
+  <androidx.cardview.widget.CardView
+    android:id="@+id/alert_list_line_right_swipe_enu"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="0dp"
+    android:layout_marginTop="0dp"
+    android:padding="0dp"
+    card_view:cardCornerRadius="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+
+      <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/alert_line_btn_activetoggle"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        fancy:fb_borderWidth="0dp"
+        fancy:fb_defaultColor="@color/primaryDarkColor"
+        fancy:fb_focusColor="@color/primaryColor"
+        fancy:fb_fontIconResource="&#xf205;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="0dp"
+        fancy:fb_text=""
+        fancy:fb_textColor="#FFFFFF"/>
+
+      <mehdi.sakout.fancybuttons.FancyButton
+        android:id="@+id/alert_line_btn_delete"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/alert_line_btn_activetoggle"
+        app:layout_constraintTop_toTopOf="parent"
+        fancy:fb_borderWidth="0dp"
+        fancy:fb_defaultColor="@color/secondaryDarkColor"
+        fancy:fb_focusColor="@color/secondaryColor"
+        fancy:fb_fontIconResource="&#xf1f8;"
+        fancy:fb_iconPosition="left"
+        fancy:fb_radius="0dp"
+        fancy:fb_text=""
+        fancy:fb_textColor="#FFFFFF"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+  </androidx.cardview.widget.CardView>
+
+</com.guanaj.easyswipemenulibrary.EasySwipeMenuLayout>

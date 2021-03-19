@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+  <string name="about_appdescription">Erkenne Trends am Crypto Markt auf einen Blick.\n\n</string>
+  <string name="about_thirdparty"><![CDATA[<h2>3rd-party Daten und Bibliotheken</h2>\n\Preis-Informationen von <a href="https://www.coinpaprika.com">CoinGecko</a> und <a href="http://www.cryptocompare.com">cryptocompare.com</a> bereitgestellt.<br/>]]></string>
+  <string name="about_websiteinfo"><![CDATA[<h1>Unterstütze die Entwicklung!</h1>\n\nWenn dir die App gefällt, besuch unsere <a href="http://cryptotrends.launchaco.com">Website</a> um herauszufinden, wie du uns unterstützen kannst.<br/>]]></string>
+
+  <string name="addeditalert_alert_created">Alarm angelegt.</string>
+  <string name="addeditalert_base_price">Basispreis in %s</string>
+  <string name="addeditalert_currentpriceinfo"><![CDATA[1 %s ist momentan <a href="#">%s</a> wert]]></string>
+  <string name="addeditalert_input_not_valid">Nicht alle eingegebenen Werte sind gültig.</string>
+  <string name="addeditalert_no_valid_price">Kein gültiger Preis!</string>
+  <string name="addeditalert_notes">Notizen (optional)</string>
+  <string name="addeditalert_signaltype_subheader_buy">Buy-Signale</string>
+  <string name="addeditalert_signaltype_subheader_none">Generelle Alarme</string>
+  <string name="addeditalert_signaltype_subheader_sell">Sell-Signale</string>
+  <string name="addeditalert_threshold_price">Alarmpreis in %s</string>
+  <string name="addeditalert_title">Alarm hinzufügen/ändern</string>
+
+  <string name="alertlist_emptyview">Keine Alarme vorhanden.\nErstelle einen mit dem + Button.</string>
+
+  <string name="currencydetail_circulating_supply">Verfügbare Einheiten:</string>
+  <string name="currencydetail_menu_add_alert">Alarm hinzufügen</string>
+  <string name="currencydetail_menu_togglefavorite">Favorit umschalten</string>
+  <string name="currencydetail_menu_togglewatchlist">Beobachten umschalten</string>
+  <string name="currencydetail_showcreatedalert">Zeigen</string>
+
+  <string name="currencylist_bnav_all">Alle</string>
+  <string name="currencylist_bnav_favorites">Favoriten</string>
+  <string name="currencylist_bnav_watchlist">Watchlist</string>
+  <string name="currencylist_emptyview_all">Keine Preis-Informationen verfügbar.\nAktualisiere durch Herunterziehen.</string>
+  <string name="currencylist_emptyview_favorites">Füge Favoriten hinzu indem du auf einem Eintrag\nnach links wischst und auf den Stern klickst.</string>
+  <string name="currencylist_emptyview_watchlist">Füge etwas zur Watchlist hinzu indem du auf einem Eintrag\nnach links wischst und auf das Auge klickst.</string>
+  <string name="currencylist_header_24hvolume">24h Volumen</string>
+  <string name="currencylist_header_marketcap">Markt Kap.</string>
+  <string name="currencylist_header_nameprice">Name / Preis</string>
+  <string name="currencylist_pricedataupdated">Kursinformationen aktualisiert.</string>
+  <string name="currencylist_remoteexception">Fehler beim Aktualisieren. Bitte erneut versuchen.</string>
+  <string name="currencylist_remoteexception_detailview">Fehler beim Aktualisieren. Charts nicht verfügbar.</string>
+  <string name="currencylist_search">Suche</string>
+
+  <string name="mainactivity_query_exit">Zum Beenden erneut drücken</string>
+
+  <string name="menu_main_about">Über die App</string>
+  <string name="menu_main_alerts">Alarme</string>
+  <string name="menu_main_feedback">Feedback senden</string>
+  <string name="menu_main_marketoverview">Marktübersicht</string>
+  <string name="menu_main_settings">Einstellungen</string>
+
+  <string name="navheader_lastupdated">Aktualisiert:</string>
+  <string name="navheader_never">nie</string>
+
+  <string name="navigation_drawer_close">Schließe Navigationsleiste</string>
+  <string name="navigation_drawer_open">Öffne Navigationsleiste</string>
+
+  <string name="notification_customalert_triggered_text">Preis von %s ist jetzt %s (von %s)</string>
+  <string name="notification_customalert_triggered_title">%s Preis-Alarm!</string>
+  <string name="notification_customalert_triggered_title_buy">Buy-Signal für %s!</string>
+  <string name="notification_customalert_triggered_title_sell">Sell-Signal für %s!</string>
+  <string name="notification_smartalarm_marketcap_text">Kapitalisierung änderte sich um %.2f%% auf %s Mrd.</string>
+  <string name="notification_smartalarm_marketcap_title">Änderung der Markt-Kapitalisierung!</string>
+
+  <string name="toolbar_billion_suffix">%s Mrd.</string>
+  <string name="toolbar_million_suffix">%s Mio.</string>
+
+  <string name="pref_activity_title_settings">Einstellungen</string>
+  <string name="pref_category_general">Allgemein</string>
+  <string name="pref_category_smartalarms">Smarte Alarme</string>
+  <string name="pref_marketcapalarm_title">Änderung Markt-Kapitalisierung</string>
+  <string name="pref_marketcapalarm_percentslider">Benötigte Änderung in % / 24h</string>
+  <string name="pref_summary_alarm_active">Alarm ist aktiv</string>
+  <string name="pref_summary_alarm_inactive">Alarm ist inaktiv</string>
+  <string name="pref_title_basecurrency">Basis-Währung</string>
+
+  <string name="smartalarm_marketcap_activated">Markt Kap. Alarm aktiviert!</string>
+  <string name="smartalarm_marketcap_disabled">Markt Kap. Alarm deaktiviert.</string>
+
+  <string name="snack_currency_favored">Favoriten-Status für %s geändert.</string>
+  <string name="snack_currency_watched">Beobachten-Status für %s geändert.</string>
+  <string name="pref_category_other">Anderes</string>
+  <string name="pref_summary_analytics_active">Sammeln anonymer Nutzungsdaten ist aktiviert und hilft, die App zu verbessern.</string>
+  <string name="pref_summary_analytics_inactive">Sammeln anonymer Nutzungsdaten ist deaktiviert. Aktiviere es, um mitzuhelfen die App zu verbessern.</string>
+  <string name="currencylist_pricedataupdate">Aktualisiere Preis-Informationen, bitte warten…</string>
+</resources>
